@@ -11,6 +11,8 @@ const props = defineProps<{
 
 <style scoped>
 .smallText{
-    font-family: 'GroteskWideR'
+    font-family: 'GroteskWideR';
+    line-height: 1.2;
+    font-size: 10px;
 }
 </style>

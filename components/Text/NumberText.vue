@@ -1,17 +1,17 @@
 <script setup lang="ts">
 const props = defineProps<{
-    headText: string
+    numberText: string
 }>()
 </script>
 <template>
     <div>
-        <p class="headText"> {{ headText }}</p>
+        <p class="numberText"> {{ numberText }}</p>
     </div>
 </template>
 
 <style scoped>
-.headText{
-    font-family: 'Grotesk';
+.numberText{
+    font-family: 'damn';
     line-height:0;
 }
 </style>
