@@ -3,10 +3,16 @@
 </script>
 
 <template>
-  <div>
+  <div class="area">
     <TheHeader></TheHeader>
   </div>
 </template>
 
-<style>
+<style scoped>
+.area{
+  padding: 62px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
 </style>
