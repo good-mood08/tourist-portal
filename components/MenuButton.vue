@@ -6,7 +6,7 @@ const props = defineProps<{
 <template>
     <div>
         <button class="button-body">
-            <TextBaseText baseText="Меню"></TextBaseText>
+            <TextBaseText :baseText="buttonText"></TextBaseText>
         </button>
     </div>
 </template>

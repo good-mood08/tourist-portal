@@ -13,6 +13,11 @@
     src: url('/public/fonts/cy-grotesk/CyGrotesk-WideRegular.otf');
 }
 
+@font-face {
+    font-family: 'GroteskWideB';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideBold.otf');
+}
+
 
 @font-face {
     font-family: 'damn';
