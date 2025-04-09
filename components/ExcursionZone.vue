@@ -45,7 +45,7 @@ const props = defineProps<{
 .d-flex{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1  px;
 }
 
 .form{
@@ -55,7 +55,7 @@ const props = defineProps<{
     padding: 15px 18px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 .grey-text{
     color: #A9A9A9;
