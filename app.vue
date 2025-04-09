@@ -4,9 +4,12 @@
 
 <template>
   <div class="area">
-    <TheHeader></TheHeader>
+    <div class="head">
+      <TheHeader></TheHeader>
     <ActiveZone></ActiveZone>
+    </div>
     <ExcursionZone></ExcursionZone>
+    <TurInf></TurInf>
   </div>
 </template>
 
@@ -16,5 +19,10 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
+}
+.head{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 </style>

@@ -1,14 +1,15 @@
 <script setup lang="ts">
 const props = defineProps<{
-    headText: string
 }>()
 </script>
 <template>
-    <p class="headText"> {{ headText }}</p>
+    <div class="tur-inf-block">
+        <h5>Название</h5>
+        <p>свысвсвсвсвсв</p>
+    </div>
 </template>
 
 <style scoped>
 .headText{
-    font-family: 'Grotesk';
 }
 </style>

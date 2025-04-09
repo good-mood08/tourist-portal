@@ -4,9 +4,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div>
         <p class="baseText"> {{ baseText }}</p>
-    </div>
 </template>
 
 <style scoped>
