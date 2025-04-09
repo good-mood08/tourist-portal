@@ -1,13 +1,29 @@
 <script setup lang="ts">
 const props = defineProps<{
+    name: string,
+    adress: string
 }>()
 </script>
 <template>
-    <h1>Туристко-Информационные центры</h1>
-    <TurInfBlock></TurInfBlock>
+    <div class="tur-inf-area">
+        <h1>Туристко-Информационные центры</h1>
+        <div class="tur-inf-blocks">
+            <TurInfBlock name="jhjhjjjh" adress="yyyyyy"></TurInfBlock>
+            <TurInfBlock name="jhjhjjjh" adress="yyyyyy"></TurInfBlock>
+            <TurInfBlock name="jhjhjjjh" adress="yyyyyy"></TurInfBlock>
+        </div>
+    </div>
 </template>
 
 <style scoped>
-.headText{
+.tur-inf-area{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.tur-inf-blocks{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 </style>
