@@ -1,20 +1,30 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div>
-    <p class="font-(family-name:Grotesk) text-[14px]">d,nsjfhjke</p>
-    <p class="fo">d,nsjfhjke</p>
-    <p class="fo1">d,nsjfhjke</p>
-    <p class="fo2">d,nsjfhjke</p>
+  <div class="area">
+    <div class="head">
+      <TheHeader></TheHeader>
+    <ActiveZone></ActiveZone>
+    </div>
+    <ExcursionZone></ExcursionZone>
+    <TurInf></TurInf>
+    <EventsZone></EventsZone>
+    <TravelGuide></TravelGuide>
   </div>
 </template>
 
-<style>
-.fo {
-  font-family: 'Grotesk';
+<style scoped>
+.area{
+  padding: 62px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
-.fo1 {
-  font-family: 'GroteskWideM';
-}
-.fo2 {
-  font-family: 'GroteskWideR';
+.head{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 </style>
