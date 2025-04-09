@@ -19,11 +19,10 @@
 }
 </style> -->
 <script lang="ts">
-import {  MoveText, PriceBlock, Yyy } from '#components';
 
 </script>
 <template>
   <div>
-    <Yyy></Yyy>
+      <BurgerMenu></BurgerMenu>
   </div>
 </template>
