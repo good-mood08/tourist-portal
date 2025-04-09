@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id      Int    @id @default(autoincrement())
+  login   String @unique
+  pasword String
+}
+
+model Route {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+
+  location_route Location_route[]
+  route_tag      Route_tag[]
+}
+
+model Route_tag {
+  id       Int   @id @default(autoincrement())
+  route_id Int
+  tag_id   Int
+  route    Route @relation(fields: [route_id], references: [id])
+  tag      Tag   @relation(references: [id], fields: [tag_id])
+}
+
+model Location_route {
+  id          Int      @id @default(autoincrement())
+  route_id    Int
+  location_id Int
+  route       Route    @relation(fields: [route_id], references: [id])
+  location    Location @relation(fields: [location_id], references: [id])
+
+  @@unique([route_id, location_id])
+}
+
+model Location {
+  id             Int              @id @default(autoincrement())
+  name           String
+  description    String
+  lon            Float
+  lat            Float
+  location_tag   Location_tag[]
+  location_route Location_route[]
+  location_image Location_image[]
+}
+
+model Location_tag {
+  id          Int      @id @default(autoincrement())
+  location_id Int
+  tag_id      Int
+  location    Location @relation(fields: [location_id], references: [id])
+  tag         Tag      @relation(references: [id], fields: [tag_id])
+}
+
+model Tag {
+  id           Int            @id @default(autoincrement())
+  tag          String
+  location_tag Location_tag[]
+  route_tag    Route_tag[]
+}
+
+model Location_image {
+  id          Int @id @default(autoincrement())
+  location_id Int
+  image_id    Int
+
+  image    Image    @relation(fields: [image_id], references: [id])
+  location Location @relation(fields: [location_id], references: [id])
+}
+
+model Image {
+  id             Int              @id @default(autoincrement())
+  src            String
+  location_image Location_image[]
+  event_image    Event_image[]
+}
+
+model Event {
+  id          Int           @id @default(autoincrement())
+  name        String
+  date        DateTime
+  description String
+  event_image Event_image[]
+}
+
+model Event_image {
+  id       Int   @id @default(autoincrement())
+  event_id Int
+  image_id Int
+  image    Image @relation(fields: [image_id], references: [id])
+  event    Event @relation(fields: [event_id], references: [id])
+}
