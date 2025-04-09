@@ -21,6 +21,5 @@ const props = defineProps<{
 .text{
     font-family: 'GroteskWideR';
     font-size: 10px;
-    line-height: 0;
 }
 </style>

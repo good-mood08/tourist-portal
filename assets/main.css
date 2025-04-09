@@ -18,3 +18,15 @@
     font-family: 'damn';
     src: url('/public/fonts/DAMN/DAMN.ttf');
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+h1{
+    font-family: 'GroteskWideM';
+    line-height:0;
+    font-size: 24px;
+    font-weight: 500;
+}

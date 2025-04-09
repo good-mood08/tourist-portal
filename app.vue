@@ -6,6 +6,7 @@
   <div class="area">
     <TheHeader></TheHeader>
     <ActiveZone></ActiveZone>
+    <ExcursionZone></ExcursionZone>
   </div>
 </template>
 

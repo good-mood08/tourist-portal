@@ -12,6 +12,5 @@ const props = defineProps<{
 <style scoped>
 .baseText{
     font-family: 'GroteskWideM';
-    line-height: 0;
 }
 </style>

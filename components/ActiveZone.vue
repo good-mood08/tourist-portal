@@ -17,18 +17,24 @@ import NumberText from './Text/NumberText.vue';
             <div>
                 
             </div>
-            <div>
-                <NumberText class="rr" numberText="-1"/>
-                <NumberText numberText="."/>
+            <div class="temperature">
+                <p class="temperature-text" >-1</p>
+                <p class="temperature-text" >.</p>
             </div>
         </section>
     </div>
 </template>
 
 <style scoped>
-
-.rr{
+.temperature{
+    display: flex;
+    flex-direction: row;
+}
+.temperature-text{
     font-size: 144px;
+    font-family: 'damn';
+    line-height:0;
+    color: #E90729;
 }
 .ooo{
     display: flex;
@@ -42,7 +48,6 @@ import NumberText from './Text/NumberText.vue';
 
 }
 .active-zone-area{
-    background-color: aquamarine;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 1fr auto;

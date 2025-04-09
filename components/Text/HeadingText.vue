@@ -12,6 +12,5 @@ const props = defineProps<{
 <style scoped>
 .headText{
     font-family: 'Grotesk';
-    line-height:0;
 }
 </style>

@@ -12,7 +12,6 @@ const props = defineProps<{
 <style scoped>
 .numberText{
     font-family: 'damn';
-    line-height:0;
     color: #E90729;
 }
 </style>
