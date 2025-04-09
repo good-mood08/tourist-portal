@@ -27,7 +27,7 @@
   flex-direction: column;
   gap: 16px;
 }
-</style> -->
+</style>
 <script lang="ts">
 import { EventsDatePicker } from '#components';
 import Calendar from './components/Calendar.vue';
@@ -36,8 +36,3 @@ import Calendar from './components/Calendar.vue';
 
 
 </script>
-<template>
-  <div>
-      <EventsDatePicker :startdate="new Date()" :finaldate="new Date(2025, 4, 19)"></EventsDatePicker>
-  </div>
-</template>
