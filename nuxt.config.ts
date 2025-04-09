@@ -6,4 +6,7 @@ export default defineNuxtConfig({
   fileStorage: {
     mount: './public/images/',
   },
+  css:[
+    '@/assets/main.css'
+  ]
 })
