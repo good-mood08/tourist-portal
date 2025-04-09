@@ -13,9 +13,9 @@ const props = defineProps<{
                 <RedButton buttonText="Давайте!"></RedButton>
             </div>
             <div class="list">
-                <Ex />
-                <Ex />
-                <Ex />
+                <Ex name="hhh"/>
+                <Ex name="hhh"/>
+                <Ex name="hhh"/>
             </div>
         </div>
     </div>

@@ -10,6 +10,8 @@
     </div>
     <ExcursionZone></ExcursionZone>
     <TurInf></TurInf>
+    <EventsZone></EventsZone>
+    <TravelGuide></TravelGuide>
   </div>
 </template>
 

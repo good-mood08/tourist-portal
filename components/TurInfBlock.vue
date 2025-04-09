@@ -6,16 +6,15 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div class="tur-inf-block">
+    <BlockZ class="tur-inf-block">
         <TextBaseText :baseText="name" class="name"></TextBaseText>
         <TextSmallText :smallText="adress" class="adress"></TextSmallText>
-    </div>
+    </BlockZ>
+        
 </template>
 
 <style scoped>
 .tur-inf-block{
-    background-color: #F2F2F2;
-    border-radius: 20px;
     padding: 14px 16px;
 }
 .name{

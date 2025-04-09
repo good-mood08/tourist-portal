@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
-    name: string,
-    adress: string
-}>()
+const props = defineProps<{}>()
 </script>
 <template>
     <div class="tur-inf-area">
