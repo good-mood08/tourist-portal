@@ -13,5 +13,6 @@ const props = defineProps<{
 .numberText{
     font-family: 'damn';
     line-height:0;
+    color: #E90729;
 }
 </style>

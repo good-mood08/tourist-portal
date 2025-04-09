@@ -5,6 +5,7 @@
 <template>
   <div class="area">
     <TheHeader></TheHeader>
+    <ActiveZone></ActiveZone>
   </div>
 </template>
 

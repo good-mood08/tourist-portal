@@ -12,3 +12,9 @@
     font-family: 'GroteskWideR';
     src: url('/public/fonts/cy-grotesk/CyGrotesk-WideRegular.otf');
 }
+
+
+@font-face {
+    font-family: 'damn';
+    src: url('/public/fonts/DAMN/DAMN.ttf');
+}
