@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: 'Grotesk';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-GrandDemi.otf');
+}
+
+@font-face {
+    font-family: 'GroteskWideM';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideMedium.otf');
+}
+
+@font-face {
+    font-family: 'GroteskWideR';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideRegular.otf');
+}
