@@ -19,11 +19,28 @@
 }
 </style> -->
 <script lang="ts">
-import {  MoveText, PriceBlock, Yyy } from '#components';
+import { PriceBlock } from '#components';
+
 
 </script>
 <template>
   <div>
-    <Yyy></Yyy>
+    <MoveText></MoveText>
+    <div class="q">
+        <PriceBlock></PriceBlock>
+        <PriceBlock></PriceBlock>
+        <PriceBlock></PriceBlock>
+        <PriceBlock></PriceBlock>
+        <PriceBlock></PriceBlock>
+        <PriceBlock></PriceBlock>
+    </div>
   </div>
 </template>
+<style scoped>
+.q{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+}
+</style>
