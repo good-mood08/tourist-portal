@@ -4,19 +4,21 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-    <div>
-        <button class="button-body">
-            <p class="text">{{ buttonText }}</p>
-        </button>
-    </div>
+    <button class="button-body">
+        <p class="text">{{ buttonText }}</p>
+    </button>
 </template>
 <style scoped>
 .button-body{
     padding: 5px 25px;
+    width: fit-content;
+    display: flex;
     border: none;
     border-radius: 20px;
     color: #FFFFFF;
     background-color: #E90729;
+    display: inline-flex;
+    justify-content: center;
 }
 .text{
     font-family: 'GroteskWideR';
