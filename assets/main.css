@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Grotesk';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-GrandDemi.otf');
+}
+
+@font-face {
+    font-family: 'GroteskWideM';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideMedium.otf');
+}
+
+@font-face {
+    font-family: 'GroteskWideR';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideRegular.otf');
+}
+
+@font-face {
+    font-family: 'GroteskWideB';
+    src: url('/public/fonts/cy-grotesk/CyGrotesk-WideBold.otf');
+}
+
+
+@font-face {
+    font-family: 'damn';
+    src: url('/public/fonts/DAMN/DAMN.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+h1{
+    font-family: 'GroteskWideM';
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.div{
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}

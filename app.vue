@@ -1,5 +1,38 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div>
-  
+  <div class="area">
+    <div class="head">
+      <TheHeader></TheHeader>
+    <ActiveZone></ActiveZone>
+    </div>
+    <ExcursionZone></ExcursionZone>
+    <TurInf></TurInf>
+    <EventsZone></EventsZone>
+    <TravelGuide></TravelGuide>
   </div>
 </template>
+
+<style scoped>
+.area{
+  padding: 62px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.head{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+</style>
+<script lang="ts">
+import { EventsDatePicker } from '#components';
+import Calendar from './components/Calendar.vue';
+
+
+
+
+</script>
