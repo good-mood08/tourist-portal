@@ -15,9 +15,15 @@ import type { YMapLocationRequest } from '@yandex/ymaps3-types/imperative/YMap';
 const map = shallowRef<null | YMap>(null);
 
 interface Point {
-  latitude: number
-  longitude: number
-  tags: string[]
+  tagId: string,
+  name: string,
+  locations: { 
+    id: string,
+    title: string,
+    lat: number,
+    lon: number,
+    isGeneral: boolean
+  }[]
 }
 
 const props = defineProps<{
@@ -39,27 +45,22 @@ const isFilterFood = ref(false)
     }"
     width="100%"
     height="100%"
-    
   >
     <yandex-map-default-scheme-layer/>
     <yandex-map-default-features-layer/>
     
-    <yandex-map-default-marker
-      v-for="point in props.points.filter(point => {
-        if (!isFilterFood) {
-          return true
-        }
-        return point.tags.includes(props.foodTag)
-      })"
-      :key="`${point.latitude}-${point.longitude}`"
-      :settings="{
-        coordinates: [point.longitude, point.latitude],
-        title: point.title,
-        subtitle: point.description,
-        
-
-      }"
-    />
+    <template v-for="point in props.points" :key="point.tagId">
+      <yandex-map-default-marker
+        v-for="location in point.locations"
+        v-if="!isFilterFood || point.tagId.includes(props.foodTag)"
+        :key="location.id"
+        :settings="{
+          coordinates: [location.lon, location.lat],
+          title: location.title,
+          // subtitle можно добавить, если есть соответствующее поле
+        }"
+      />
+    </template>
     
     <yandex-map-controls :settings="{ position: 'left bottom' }">
       <yandex-map-control-button
@@ -80,7 +81,6 @@ const isFilterFood = ref(false)
   padding: 8px 12px;
   background: white;
   border-radius: 4px;
-  /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
   font-size: 14px;
   cursor: pointer;
   white-space: nowrap;

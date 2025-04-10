@@ -14,7 +14,7 @@ async function locations() {
     lat: location.lat,
     lon: location.lon,
     isGeneral: location.isGeneral,
-    url:`http://localhost:1337${location.images[0].url}`
+    // url:`http://localhost:1337${location.images[0].url}`
   }))
   return data
 }
