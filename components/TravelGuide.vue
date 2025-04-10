@@ -1,5 +1,17 @@
 <script setup lang="ts">
-
+async function costs() {
+  const { find } = useStrapi()
+  const response = await find('costs', {
+    populate: '*'
+  })
+  const data = response.data.map((cost:any) => ({
+    type: cost.type,
+    cost: cost.cost
+    
+  }))
+  return data
+}
+const transport = await costs()
 </script>
 
 <template>
@@ -12,9 +24,10 @@
     </div>
     <div class="guide-area">
         <h1>Тарифы транспорта</h1>
-        <PriceBlock price="135" transport="Автобус"></PriceBlock>
-        <PriceBlock price="35" transport="Метро"></PriceBlock>
-        <PriceBlock price="95" transport="Водный"></PriceBlock>
+        <div v-for="i in transport">
+          <PriceBlock :price="i.cost" :transport="i.type"></PriceBlock>
+        </div>
+    
     </div>
     
   </div>

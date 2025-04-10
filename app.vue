@@ -1,5 +1,25 @@
 <script setup lang="ts">
 
+
+async function locations() {
+  const { find } = useStrapi()
+
+  const response = await find('locations', {
+    populate: '*'
+  })
+  const data = response.data.map((location:any) => ({
+    id: location.documentId,
+    title: location.title,
+    description: location.description,
+    lat: location.lat,
+    lon: location.lon,
+    isGeneral: location.isGeneral,
+    url:`http://localhost:1337${location.images[0].url}`
+  }))
+  return data
+}
+
+const location = await locations()
 </script>
 
 <template>
@@ -8,10 +28,16 @@
       <TheHeader></TheHeader>
     <ActiveZone></ActiveZone>
     </div>
+    <Sightseeing></Sightseeing>
     <ExcursionZone></ExcursionZone>
     <TurInf></TurInf>
     <EventsZone></EventsZone>
     <TravelGuide></TravelGuide>
+  </div>
+  <!-- {{ location }} -->
+  <div v-for="i in location">
+
+    <Location :title="i.title" :description="i.description" :src="i.url"/>
   </div>
 </template>
 
