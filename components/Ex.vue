@@ -25,4 +25,10 @@ const props = defineProps<{
     font-size: 13px;
     word-break: break-all;
 }
+
+@media (min-width: 768px) {
+    .ex-name{
+        font-size: 40px;
+    }    
+}
 </style>

@@ -6,7 +6,7 @@
   <div class="area">
     <div class="head">
       <TheHeader></TheHeader>
-    <ActiveZone></ActiveZone>
+    <ActiveZone :id="tours"></ActiveZone>
     </div>
     <ExcursionZone></ExcursionZone>
     <TurInf></TurInf>

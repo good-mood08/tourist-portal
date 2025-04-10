@@ -45,7 +45,7 @@ const props = defineProps<{
 .d-flex{
     display: flex;
     flex-direction: column;
-    gap: 1  px;
+    gap: 1px;
 }
 
 .form{
@@ -59,5 +59,13 @@ const props = defineProps<{
 }
 .grey-text{
     color: #A9A9A9;
+}
+
+@media (min-width: 768px) {
+    .excursions{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr;
+    }
 }
 </style>

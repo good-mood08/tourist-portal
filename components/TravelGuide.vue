@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const points = []
 </script>
 
 <template>
@@ -7,15 +7,21 @@
     <div class="guide-area">
         <h1>Где поесть</h1>
         <BlockZ class="map">
-            <MenuButton buttonText="Национальные блюда" class="food-filt"></MenuButton>
+          <FoodMap :points="points" food-tag="t1" "/>
+          
+            <!-- <MenuButton buttonText="Национальные блюда" class="food-filt">
+
+            </MenuButton> -->
         </BlockZ>
     </div>
     <div class="guide-area">
         <h1>Тарифы транспорта</h1>
-        <PriceBlock price="135" transport="Автобус"></PriceBlock>
-        <PriceBlock price="35" transport="Метро"></PriceBlock>
-        <PriceBlock price="95" transport="Водный"></PriceBlock>
-    </div>
+          <div class="tarif">
+            <PriceBlock price="135" transport="Автобус"></PriceBlock>
+            <PriceBlock price="35" transport="Метро"></PriceBlock>
+            <PriceBlock price="95" transport="Водный"></PriceBlock>
+          </div>
+        </div>
     
   </div>
 </template>
@@ -32,7 +38,7 @@
   gap: 16px;
 }
 .map{
-    height: 200px;
+    height: 500px;
     width: 100%;
 }
 .food-filt{
@@ -40,5 +46,16 @@
     top: 80%;
     left: 3%;
     font-size: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+  .tarif{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 88px;
+  }
 }
 </style>

@@ -12,4 +12,10 @@ const props = defineProps<{
     font-family: 'GroteskWideR';
     font-size: 10px;
 }
+
+@media (min-width: 768px) {
+    .smallText{
+        font-size: 20px;
+    }    
+}
 </style>

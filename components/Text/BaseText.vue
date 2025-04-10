@@ -11,4 +11,10 @@ const props = defineProps<{
 .baseText{
     font-family: 'GroteskWideM';
 }
+
+@media (min-width: 768px) {
+    .baseText{
+        font-size: 20px;
+    }
+}
 </style>
