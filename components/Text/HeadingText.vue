@@ -11,4 +11,10 @@ const props = defineProps<{
 .headText{
     font-family: 'Grotesk';
 }
+
+@media (min-width: 768px) {
+    .headText{
+        font-size: 40px;
+    }
+}
 </style>

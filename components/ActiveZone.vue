@@ -78,27 +78,33 @@ import NumberText from './Text/NumberText.vue';
 .d{
     width: 70%;
 }
-    .card-body{
-        padding: 22px  25px;
-        background-color: #F2F2F2;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        isolation: isolate;
-        overflow: hidden;
-        position: relative;
+.card-body{
+    padding: 22px  25px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    isolation: isolate;
+    overflow: hidden;
+    position: relative;
+}
 
+.card-body2{
+    padding: 16px 0px 0px 18px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .active-zone-area{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
     }
-
-    .card-body2{
-        padding: 16px 0px 0px 18px;
-        background-color: #F2F2F2;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        isolation: isolate;
-        position: relative;
-
-    }
+    
+}
 </style>

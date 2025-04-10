@@ -26,7 +26,7 @@ const location = await locations()
   <div class="area">
     <div class="head">
       <TheHeader></TheHeader>
-    <ActiveZone></ActiveZone>
+    <ActiveZone :id="tours"></ActiveZone>
     </div>
     <Sightseeing></Sightseeing>
     <ExcursionZone></ExcursionZone>
