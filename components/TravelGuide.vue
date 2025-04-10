@@ -1,5 +1,19 @@
 <script setup lang="ts">
-const points = []
+
+async function costs() {
+  const { find } = useStrapi()
+  const response = await find('costs', {
+    populate: '*'
+  })
+  const data = response.data.map((cost:any) => ({
+    type: cost.type,
+    cost: cost.cost
+    
+  }))
+  return data
+}
+const transport = await costs()
+
 </script>
 
 <template>
@@ -16,12 +30,13 @@ const points = []
     </div>
     <div class="guide-area">
         <h1>Тарифы транспорта</h1>
-          <div class="tarif">
-            <PriceBlock price="135" transport="Автобус"></PriceBlock>
-            <PriceBlock price="35" transport="Метро"></PriceBlock>
-            <PriceBlock price="95" transport="Водный"></PriceBlock>
-          </div>
+
+        <div v-for="i in transport">
+          <PriceBlock :price="i.cost" :transport="i.type"></PriceBlock>
         </div>
+    
+    </div>
+
     
   </div>
 </template>
